@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+// ===============
+// COLORS
+// ===============
+
+$peach: #e7816b;
+$light-peach: #ffad9b;
+$pale-peach: #FDF3F0;
+$black: #1d1c1e;
+$dark-grey: #333136;
+$white: #ffffff;
+$light-grey: #f1f3f5;
+
+// ===============
+// FONTS
+// ===============
+
+$main-font: 'Jost', sans-serif;
+
+* {
+    font-family: $main-font;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 48px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 48px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+// ===============
+// BUTTONS
+// ===============
+
+@mixin button {
+    height: 56px;
+    font-size: 15px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    width: 152px;
+    border: none;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    &:hover {
+        background-color: $light-peach;
+        color: white;
+    }
+}
+
+@mixin button-on-dark {
+    background-color: white;
+    color: $black;
+}
+
+@mixin button-on-light {
+    background-color: $peach;
+    color: white;
+}
+
+// ===============
+// FORM ELEMENTS
+// ===============
+
+@mixin input {
+    background-color: transparent;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid $white;
+    color: $white;
+    transition: border-bottom 0.3s;
+    &::placeholder {
+        opacity: .5;
+    }
+    &:hover {
+        border-bottom: 2px solid $white;
+    }
+}
+
+// ===============
+// DESIGN STYLES
+// ===============
+
+.link-style {
+    text-decoration: none;
+}
+
+@mixin center {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.line {
+    height: 1px;
+    box-sizing: border-box;
+    background-color: $white;
+    opacity: .1;
+}
+
+@mixin sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+* {
+    &:focus,
+    &:active {
+        outline: none;
+    }
+}

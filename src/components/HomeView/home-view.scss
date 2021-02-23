@@ -1,0 +1,222 @@
+@import '../../styles-library';
+
+.app-home-view__container {
+    // @include center();
+    background-image: url('../../assets/shared/desktop/bg-pattern-leaf.svg'), url('../../assets/shared/desktop/bg-pattern-leaf-2.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0 320px, 100% 1725px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .home-view-hero__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 165px;
+        width: 1110px;
+        background-color: $peach;
+        border-radius: 15px;
+        padding: 145px 95px;
+        background-image: url('../../assets/home/desktop/image-hero-phone.png'), url('../../assets/home/desktop/bg-pattern-hero-home.svg');
+        background-repeat: no-repeat, no-repeat;
+        background-position: calc(100% + 75px) -35px, 100% 50%;
+
+        .home-view__title, .home-view__text {
+            color: $white;
+        }
+
+        .home-view__title {
+            width: 540px;
+            height: 165px;
+            margin-bottom: 11px;
+        }
+
+        .home-view__text {
+            width: 445px;
+            margin: 0;
+            margin-bottom: 40px;
+        }
+        .home-view__button {
+            display: block;
+            margin: 0;
+            @include button();
+            @include button-on-dark();
+        }
+    }
+
+    .home-view-projects__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 24px;
+        margin: 160px 165px;
+        height: 640px;
+        width: 1110px;
+
+        .home-view-projects__web {
+            grid-area: 1/1/3/2;
+            background-image: url('../../assets/home/desktop/image-web-design-large.jpg');
+        }
+
+        .home-view-projects__app {
+            grid-area: 1/2/2/3;
+            background-image: url('../../assets/home/desktop/image-app-design.jpg');
+        }
+
+        .home-view-projects__graphic {
+            grid-area: 2/2/3/3;
+            background-image: url('../../assets/home/desktop/image-graphic-design.jpg');
+        }
+
+        .home-view__background {
+            background-color: rgba(0,0,0,.6);
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: rgba(231,129,107,.85);
+            }
+            
+        }
+
+        .home-view-projects__app,
+        .home-view-projects__graphic,
+        .home-view-projects__web {
+            border-radius: 15px;
+            color: white;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: background-color 0.3s;
+            cursor: pointer;
+
+            .home-view-projects__title {
+                text-transform: uppercase;
+                margin-bottom: 24px;
+            } 
+            .home-view-projects__link {
+                text-transform: uppercase;
+                font-size: 15px;
+                line-height: 22px;
+                letter-spacing: 5px;
+                margin: 0;
+                .home-view-projects__arrow {
+                    margin-left: 21px;
+                }
+            }
+        }
+    }
+
+    .home-view-stats__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 40px;
+        margin: 0 165px 88px;
+        width: 1110px;
+
+        .home-view-stats__item {
+            text-align: center;
+            position: relative;
+
+            .home-view-stats__image {
+                margin-bottom: 48px;
+            }
+            .home-view-stats__passionate-circle,
+            .home-view-stats__friendly-circle,
+            .home-view-stats__resourceful-circle {
+                position: absolute;
+                left: 0; 
+                right: 0; 
+                margin-left: auto; 
+                margin-right: auto;  
+            }
+            .home-view-stats__title {
+                margin: 0 0 32px;
+            }
+            .home-view-stats__text {
+                margin: 0;
+            }
+
+        }
+    }
+}
+
+
+// ========================
+// TABLET
+// ========================
+
+@media only screen and (max-width: 1024px) {
+
+    .app-home-view__container {
+        background-image: none;
+        
+        .home-view-hero__container {
+            margin: 0 40px;
+            width: 689px;
+            padding: 64px 0 457px;
+            text-align: center;
+            background-position: 50% -450%, 350% 45%;
+    
+            .home-view__title,
+            .home-view__text,
+            .home-view__button {
+                margin: 0 auto;
+            }
+            .home-view__title {
+                margin-bottom: 8px;
+            }
+            .home-view__text {
+                margin-bottom: 19px;
+            }
+        }
+    
+        .home-view-projects__container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 25px;
+            width: 689px;
+            margin: 120px 40px 0;
+    
+            .home-view-projects__web,
+            .home-view-projects__app,
+            .home-view-projects__graphic {
+                grid-area: unset;
+            }   
+            
+        }
+    
+        .home-view-stats__container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            grid-row-gap: 32px;
+            width: 689px;
+            margin: 120px 40px 0;
+    
+            .home-view-stats__item {
+                text-align: left;
+    
+                .home-view-stats__title {
+                    margin: 40px 0 16px 0;
+                }
+    
+                .home-view-stats__image {
+                    float: left;
+                    margin:  0 48px 0 0;
+                }
+            }        
+        }
+    }
+
+}

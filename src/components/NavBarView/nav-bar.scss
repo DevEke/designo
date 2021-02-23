@@ -1,0 +1,44 @@
+@import '../../styles-library';
+
+.app-nav-bar__container {
+
+    .nav-bar__container {
+        padding: 64px 165px 67px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+
+        .nav-bar__logo {
+            width: 202px;
+            height: 27 px;
+        }
+
+        .nav-bar__link {
+            margin-left: 42px;
+            font-size: 14px;
+            line-height: 14px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $black;
+            letter-spacing: 2px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .app-nav-bar__container {
+
+        .nav-bar__container {
+            padding: 64px 40px;
+        }
+
+    }
+
+
+}

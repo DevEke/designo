@@ -1,0 +1,71 @@
+@import '../../styles-library';
+
+.footer-view__container {
+    padding: 140px 165px 72px;
+    background-color: $black;
+
+    .footer-view__bottom-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .footer-view__logo {
+        width: 202px;
+        height: 27px;
+    }
+
+    .footer-view__link {
+        opacity: .5;
+        margin-left: 42px;
+        text-decoration: none;
+        color: $white;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 300;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .footer-view__social {
+        color: $white;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 30px;
+        margin-top: 30px;
+
+        .footer-view__contact,
+        .footer-view__address {
+            opacity: .5;
+            margin: 0;
+        }
+        span,
+        .footer-view__contact {
+            font-weight: 500;
+        }
+    }
+
+    .footer-view__social-icons {
+        align-self: end;
+        text-align: right;
+
+        .footer-view__social-icon {
+            margin-left: 16px;
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+
+}
+
+// ========================
+// TABLET
+// ========================
+
+@media only screen and (max-width: 768px) {
+    .footer-view__container {
+        padding: 165px 40px 80px;
+    }
+}

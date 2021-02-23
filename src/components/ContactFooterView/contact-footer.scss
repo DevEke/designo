@@ -1,0 +1,68 @@
+@import '../../styles-library';
+
+.contact-footer-view__container {
+    padding: 72px 95px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 165px;
+    background-color: $peach;
+    border-radius: 15px;
+    position: relative;
+    width: 1110px;
+    top: 72px;
+    background-image: url('../../assets/shared/desktop/bg-pattern-call-to-action.svg');
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+
+    .contact-footer-view__information {
+        color: white;
+
+        .contact-footer-view__title {
+            width: 298px;
+            height: 98px;
+            font-size: 40px;
+            line-height: 40px;
+        }
+        .contact-footer-view__text {
+            width: 459px;
+            margin: 0;
+        }
+    }
+    .contact-footer-view__button {
+        display: block;
+        margin: 20px 0;
+        @include button();
+        @include button-on-dark();
+    }
+}
+
+// ========================
+// TABLET
+// ========================
+
+@media only screen and (max-width: 1024px) {
+    .contact-footer-view__container {
+        flex-direction: column;
+        justify-content: center;
+        width: 689px;
+        margin: 0 40px;
+        padding: 57px 0;
+        top: 84px;
+        text-align: center;
+
+        .contact-footer-view__information {
+            .contact-footer-view__title {
+                margin: 0 auto -2px;
+            }
+            .contact-footer-view__text {
+                width: 440px;
+                margin-bottom: 32px;
+            }
+        }
+        .contact-footer-view__button {
+            margin: 0;
+        }
+
+    }
+}

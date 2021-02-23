@@ -1,0 +1,222 @@
+@import '../../styles-library';
+
+.about-view__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../assets/shared/desktop/bg-pattern-leaf.svg'), url('../../assets/shared/desktop/bg-pattern-leaf.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0% 320px, calc(100% + 396px) 1622px;
+
+    .about-view__hero-container {
+        display: grid;
+        grid-template-columns: 7fr 5fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        height: 480px;
+        margin: 0 165px 160px;
+        width: 1110px;
+        
+
+        .about-view__hero-introduction {
+            padding: 135px 85px 135px 95px;
+            background-color: $peach;
+            border-radius: 15px 0 0 15px;
+            color: white;
+            background-image: url('../../assets/about/desktop/bg-pattern-hero-about-desktop.svg');
+            background-repeat: no-repeat;
+            background-position: 100% 100%;
+
+            .about-view__hero-title {
+                margin: 0;
+                margin-bottom: 32px;
+            }   
+
+            .about-view__hero-text {
+                margin: 0;
+            }
+        }
+        .about-view__hero-image {
+            background-image: url('../../assets/about/desktop/image-about-hero.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 0 15px 15px 0;
+        }
+    }
+
+    .about-view__talent-container {
+        display: grid;
+        grid-template-columns: 5fr 7fr;
+        grid-template-rows: 1fr;
+        grid-gap: 0px;
+        height: 640px;
+        width: 1110px;
+        margin: 0 165px;
+
+        .about-view__talent-image {
+            background-image: url('../../assets/about/desktop/image-world-class-talent.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 15px 0 0 15px;
+            
+        }
+
+        .about-view__talent-information {
+            background-color: $pale-peach;
+            padding: 154px 95px;
+            border-radius: 0 15px 15px 0;
+            background-image: url('../../assets/shared/desktop/bg-pattern-two-circles.svg');
+            background-repeat: no-repeat;
+            background-position: -140px 100%;
+
+            .about-view__talent-title {
+                margin-bottom: 24px;
+                color: $peach;
+
+            }
+            .about-view__talent-text {
+                margin: 0;
+                color: #333136;
+
+            }
+        }
+    }
+
+    .about-view__location-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 30px;
+        width: 1110px;
+        margin: 160px 0;
+
+        .about-view__location {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .about-view__location-image {
+                margin-bottom: 48px;
+            }
+
+            .about-view__location-name {
+                margin: 0 0 32px 0;
+            }
+
+            .about-view__location-button {
+                @include button;
+                @include button-on-light;
+            }
+        }
+    }
+
+    .about-view__deal-container {
+        display: grid;
+        grid-template-columns: 7fr 5fr;
+        grid-column-gap: 0px;
+        margin: 0 165px 88px 165px;
+        width: 1110px;
+        height: 640px;
+
+        .about-view__deal-information {
+            background-color: $pale-peach;
+            padding: 154px 95px;
+            border-radius: 15px 0 0 15px;
+            background-image: url('../../assets/shared/desktop/bg-pattern-two-circles.svg');
+            background-repeat: no-repeat;
+            background-position: 0% 100%;
+
+            .about-view__deal-title {
+                color: $peach;
+                margin-bottom: 24px;
+            }
+            .about-view__deal-text {
+                color: #333136;
+                margin: 0;
+            }
+        }
+
+        .about-view__deal-image {
+            background-image: url('../../assets/about/desktop/image-real-deal.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 0 15px 15px 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .about-view__container {
+        background-image: none;
+        
+        .about-view__hero-container {
+            grid-template-columns: 1fr;
+            grid-template-rows: 320px auto;
+            margin: 0 40px;
+            height: auto;
+            width: 689px;
+            
+            .about-view__hero-introduction {
+                border-radius: 0 0 15px 15px;
+                padding: 64px;
+                text-align: center; 
+            }
+            .about-view__hero-image {
+                order: -1;
+                border-radius: 15px 15px 0 0;
+                background-position: 50% 45%;
+            }
+        }
+
+        .about-view__talent-container {
+            grid-template-columns: 1fr;
+            grid-template-rows: 320px auto;
+            margin: 0 40px;
+            height: auto;
+            width: 689px;
+            margin-top: 120px;
+
+            .about-view__talent-image {
+                border-radius: 15px 15px 0 0;
+                background-position: 50% 60%;
+            }
+            .about-view__talent-information {
+                border-radius: 0 0 15px 15px;
+                padding: 64px;
+                text-align: center; 
+            }
+        }
+
+        .about-view__location-grid {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            grid-row-gap: 80px;
+            width: 689px;
+            height: auto;
+            margin: 120px 0;
+        }
+
+        .about-view__deal-container {
+            grid-template-columns: 1fr;
+            grid-template-rows: 320px auto;
+            margin: 0 40px 36px;
+            height: auto;
+            width: 689px;
+
+            .about-view__deal-information {
+                border-radius: 0 0 15px 15px;
+                padding: 64px;
+                text-align: center; 
+            }
+            .about-view__deal-image {
+                order: -1;
+                border-radius: 15px 15px 0 0;
+                background-position: 50% 50%;
+            }
+
+        }
+    }
+}
