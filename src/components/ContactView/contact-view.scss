@@ -138,6 +138,10 @@
     }
 }
 
+// ==========================
+// TABLET
+// ==========================
+
 @media only screen and (max-width: 1024px) {
     .contact-view__container {
         background-image: none;
@@ -163,6 +167,51 @@
             grid-template-rows: repeat(3, 1fr);
             grid-row-gap: 80px;
             width: 689px;
+            height: auto;
+            margin: 120px 0;
+        }
+    }
+}
+
+// ==========================
+// MOBILE
+// ==========================
+
+
+@media only screen and (max-width: 425px) {
+    .contact-view__container {
+        .contact-view__contact-form {
+            padding: 72px 24px;
+            width: 100%;
+            text-align: center;
+            border-radius: 0;
+
+            .contact-view__information {
+                padding: 0;
+                margin-bottom: 48px;
+            }
+
+            .contact-view__information-title {
+                font-size: 32px;
+                line-height: 36px;
+                margin: 0;
+                margin-bottom: 24px;
+            }
+            .contact-view__form {
+                text-align: center;
+
+                .contact-view__input-container {
+
+                    .contact-view__textarea {
+                        margin-bottom: 40px;
+                    }
+                }
+            }    
+        }
+
+        .contact-view__location-grid {
+            grid-row-gap: 48px;
+            width: 100%;
             height: auto;
             margin: 120px 0;
         }

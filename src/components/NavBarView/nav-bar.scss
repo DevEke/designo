@@ -11,7 +11,7 @@
 
         .nav-bar__logo {
             width: 202px;
-            height: 27 px;
+            height: 27px;
         }
 
         .nav-bar__link {
@@ -27,6 +27,9 @@
                 text-decoration: underline;
             }
         }
+        .nav-bar__mobile-menu {
+            display: none;
+        }
     }
 }
 
@@ -40,5 +43,28 @@
 
     }
 
+}
 
+@media only screen and (max-width: 425px) {
+   .app-nav-bar__container {
+
+       .nav-bar__container {
+           padding: 35px 24px;
+
+           .nav-bar__links {
+               display: none;
+            }
+
+           .nav-bar__mobile-menu {
+               display: block;
+               height: 24px;
+               width: 24px;
+               background-image: url('../../assets/shared/mobile/icon-hamburger.svg');
+               background-repeat: no-repeat;
+               background-position: center;
+               border: none;
+               background-color: none;
+            }
+        }
+    }
 }

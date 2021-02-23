@@ -66,3 +66,28 @@
 
     }
 }
+
+// ========================
+// MOBILE
+// ========================
+
+@media only screen and (max-width: 425px) {
+    .contact-footer-view__container {
+        width: 327px;
+        margin: 0 auto;
+        padding: 64px 24px;
+        top: 190px;
+
+        .contact-footer-view__information {
+            .contact-footer-view__title {
+                font-size: 32px;
+                line-height: 36px;
+                width: 80%;
+                margin: 0 auto 6px;
+            }
+            .contact-footer-view__text {
+                width: auto;
+            }
+        }
+    }
+}

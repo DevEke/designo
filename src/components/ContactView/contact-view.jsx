@@ -34,7 +34,7 @@ class ContactView extends Component {
                         </div>
                         <div className="contact-view__input-container">
                             <label htmlFor="message" className="contact-view__label">Message</label>
-                            <textarea className="contact-view__textarea" type="text" placeholder="Message" id="message"/>
+                            <textarea className="contact-view__textarea" type="text" placeholder="Your Message" id="message"/>
                         </div>
                         <button className="contact-view__submit-button">Submit</button>
                     </form>

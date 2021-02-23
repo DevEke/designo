@@ -1,4 +1,4 @@
-@import '../../styles-library';
+ @import '../../styles-library';
 
 .app-home-view__container {
     // @include center();
@@ -219,4 +219,65 @@
         }
     }
 
+}
+
+// ========================
+// MOBILE
+// ========================
+
+@media only screen and (max-width: 425px) {
+    .app-home-view__container {
+        .home-view-hero__container {
+            width: 100%;
+            border-radius: unset;
+            padding: 80px 24px 450px;
+            margin: 0;
+
+            .home-view__title {
+                width: auto;
+                font-size: 32px;
+                line-height: 36px;
+                height: auto;
+                margin-bottom: 14px;
+            }
+
+            .home-view__text {
+                width: auto;
+                margin: 0 auto 24px;
+            }
+
+        }
+        .home-view-projects__container {
+            grid-row-gap: 24px;
+            width: 327px;
+            margin: 120px auto 0;
+
+            .home-view__background {
+                .home-view-projects__title {
+                    font-size: 28px;
+                    line-height: 36px;
+                    margin-bottom: 12px;
+                }
+            } 
+        }
+
+        .home-view-stats__container {
+            grid-row-gap: 80px;
+            width: auto;
+            margin: 120px 24px -69px;
+
+            .home-view-stats__item {
+                text-align: center;
+
+                .home-view-stats__image {
+                    float: none;
+                    margin: 0;
+                }
+
+                .home-view-stats__title {
+                    margin: 48px 0 32px;
+                }
+            }
+        }  
+    }
 }

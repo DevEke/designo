@@ -147,6 +147,10 @@
     }
 }
 
+// ========================
+// TABLET
+// ========================
+
 @media only screen and (max-width: 1024px) {
 
     .about-view__container {
@@ -219,4 +223,80 @@
 
         }
     }
+}
+
+
+// ========================
+// MOBILE
+// ========================
+
+.about-view__container {
+
+    .about-view__hero-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 320px auto;
+        margin: 0;
+        height: auto;
+        width: 100%;
+        
+        .about-view__hero-introduction {
+            border-radius: 0;
+            padding: 64px;
+            text-align: center; 
+            padding: 80px 24px;
+
+            .about-view__hero-title {
+                margin-bottom: 24px;
+            } 
+        }
+        .about-view__hero-image {
+            order: -1;
+            border-radius: 0;
+            background-position: 50% 45%;
+        }
+    }
+    .about-view__talent-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 320px auto;
+        margin: 0;
+        height: auto;
+        width: 100%;
+
+        .about-view__talent-image {
+            border-radius: 0;
+            background-position: 50% 60%;
+        }
+        .about-view__talent-information {
+            border-radius: 0;
+            padding: 80px 24px;
+            text-align: center; 
+        }
+    }
+    .about-view__location-grid {
+        grid-row-gap: 48px;
+        width: 100%;
+        height: auto;
+        margin: 120px 0;
+    }
+    .about-view__deal-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 320px auto;
+        margin: 0;
+        height: auto;
+        width: 100%;
+        margin-bottom: -69px;
+
+        .about-view__deal-information {
+            border-radius: 0;
+            padding: 80px 24px;
+            text-align: center; 
+        }
+        .about-view__deal-image {
+            order: -1;
+            border-radius: 0;
+            background-position: 50% 50%;
+        }
+
+    }
+
 }

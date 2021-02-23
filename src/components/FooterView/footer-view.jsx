@@ -21,6 +21,11 @@ class FooterView extends Component {
                     </div>
                 </div>
                 <div className="line"/>
+                <div className="footer-view__mobile-links">
+                    <Link to="/about" className="footer-view__link">Our Company</Link>
+                    <Link to="/locations" className="footer-view__link">Locations</Link>
+                    <Link to="/contact" className="footer-view__link">Contact</Link>
+                </div>
                 <div className="footer-view__social">
                     <p className="footer-view__address">
                         <span>Designo Central Office</span><br/>

@@ -14,6 +14,7 @@ class NavBar extends Component {
                         <Link to="/locations" className="nav-bar__link">Locations</Link>
                         <Link to="/contact" className="nav-bar__link">Contact</Link>
                     </div>
+                    <button className="nav-bar__mobile-menu"/>
                 </div>
             </div>
         )
