@@ -50,17 +50,17 @@ class AboutView extends Component {
                     <div className="about-view__location">
                         <img src={ca} className="about-view__location-image" alt="canada graphic"/>
                         <h3 className="about-view__location-name">Canada</h3>
-                        <Link><button className="about-view__location-button">See Location</button></Link>
+                        <Link to="/locations"><button className="about-view__location-button">See Location</button></Link>
                     </div>
                     <div className="about-view__location">
                         <img src={au} className="about-view__location-image" alt="australia graphic"/>
                         <h3 className="about-view__location-name">Australia</h3>
-                        <Link><button className="about-view__location-button">See Location</button></Link>
+                        <Link to="/locations"><button className="about-view__location-button">See Location</button></Link>
                     </div>
                     <div className="about-view__location">
                         <img src={uk} className="about-view__location-image" alt="uk graphic"/>
                         <h3 className="about-view__location-name">United Kingdom</h3>
-                        <Link><button className="about-view__location-button">See Location</button></Link>
+                        <Link to="/locations"><button className="about-view__location-button">See Location</button></Link>
                     </div>
                 </div>
                 <div className="about-view__deal-container">

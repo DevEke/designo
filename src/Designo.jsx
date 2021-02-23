@@ -10,12 +10,26 @@ import LocationView from './components/LocationsView/location-view';
 import FooterView from './components/FooterView/footer-view';
 import ContactView from './components/ContactView/contact-view';
 import './_styles-library.scss';
+import MobileMenu from './components/MobileMenu/mobile-menu';
 
 class Designo extends Component {
+
+  menuToggle = () => {
+    document.getElementById('mobile-menu__button').classList.toggle('close-icon');
+    document.getElementById('mobile-menu').classList.toggle('hide');
+    console.log('clicked');
+  }
+
+  hideMenu = () => {
+    document.getElementById('mobile-menu__button').classList.remove('close-icon');
+    document.getElementById('mobile-menu').classList.add('hide');
+  }
+
   render() {
     return (
       <Router>
-        <NavBar />
+        <NavBar menuToggle={this.menuToggle} hideMenu={this.hideMenu}/>
+        <MobileMenu hideMenu={this.hideMenu}/>
         <Route exact path="/" render={() => <HomeView />}/>
         <Route path="/web-design" render={() => <WebDesignView />}/>
         <Route path="/app-design" render={() => <AppDesignView />}/>

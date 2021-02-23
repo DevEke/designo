@@ -33,6 +33,7 @@
     }
 }
 
+
 @media only screen and (max-width: 768px) {
     
     .app-nav-bar__container {
@@ -63,8 +64,12 @@
                background-repeat: no-repeat;
                background-position: center;
                border: none;
-               background-color: none;
+               background-color: transparent;
             }
+            .close-icon {
+                background-image: url('../../assets/shared/mobile/icon-close.svg');
+            }
+            
         }
     }
 }

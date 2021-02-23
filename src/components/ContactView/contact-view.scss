@@ -42,8 +42,25 @@
             padding-left: 64px;
             text-align: right;
             .contact-view__input-container {
+                position: relative;
+
                 .contact-view__label {
                     @include sr-only;
+                }
+
+                .form__error-message {
+                    position: absolute;
+                    text-align: right;
+                    display: block;
+                    display: flex;
+                    justify-content: center;
+                    top: 0;
+                    right: 0;
+                    small {
+                        margin-right: 8px;
+                        font-style: italic;
+                        color: white;
+                    }
                 }
                 .contact-view__input {
                     width: 100%;
@@ -65,7 +82,7 @@
                     &::placeholder {
                         font-size: 15px;
                         line-height: 26px;
-                        font-weight: 600;
+                        font-weight: 500;
                         color: white;
                         opacity: .5;
                     }
@@ -151,6 +168,7 @@
             width: 689px; 
             grid-template-columns: 1fr;
             height: auto;
+            background-position: -200 % -75%;
 
             .contact-view__information {
                 padding: 0;
@@ -185,6 +203,8 @@
             width: 100%;
             text-align: center;
             border-radius: 0;
+            background-image: url('../../assets/contact/mobile/bg-pattern-hero-contact-mobile.svg');
+            background-position: 20% 0%;
 
             .contact-view__information {
                 padding: 0;

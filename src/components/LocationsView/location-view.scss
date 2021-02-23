@@ -168,6 +168,17 @@
                 height: 320px;
             }
 
+            .location-view__ca-map {
+                background-image: url('../../assets/locations/desktop/image-map-canada.png');
+            }
+            .location-view__au-map {
+                background-image: url('../../assets/locations/desktop/image-map-australia.png');
+            }
+            .location-view__uk-map {
+                background-image: url('../../assets/locations/desktop/image-map-united-kingdom.png');
+            }
+
+
             .location-view__ca-information,
             .location-view__au-information {
                 margin-bottom: 40px;
@@ -178,6 +189,7 @@
             .location-view__uk-information {
                 padding: 80px 24px;
                 text-align: center;
+                background-position: 0% 0%;
                 .location-view__contact-information {
                     display: flex;
                     flex-direction: column;

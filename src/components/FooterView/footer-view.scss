@@ -57,6 +57,19 @@
             margin-left: 16px;
             opacity: 1;
             cursor: pointer;
+            transition: filter 0.3s;
+
+            &:hover,
+            &:focus {
+                filter: brightness(0)
+                        saturate(100%)
+                        invert(73%) 
+                        sepia(18%) 
+                        saturate(1077%) 
+                        hue-rotate(319deg) 
+                        brightness(103%) 
+                        contrast(101%);
+            }
         }
     }
 

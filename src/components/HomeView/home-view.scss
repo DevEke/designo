@@ -95,6 +95,7 @@
             color: white;
             background-repeat: no-repeat;
             background-size: cover;
+            background-position: center;
             transition: background-color 0.3s;
             cursor: pointer;
 
@@ -232,6 +233,7 @@
             border-radius: unset;
             padding: 80px 24px 450px;
             margin: 0;
+            background-position: 50% -450%, 0% 50%;
 
             .home-view__title {
                 width: auto;
@@ -251,6 +253,16 @@
             grid-row-gap: 24px;
             width: 327px;
             margin: 120px auto 0;
+
+            .home-view-projects__web {
+                background-image: url('../../assets/home/mobile/image-web-design.jpg');
+            }
+            .home-view-projects__app {
+                background-image: url('../../assets/home/mobile/image-app-design.jpg');
+            }
+            .home-view-projects__graphic {
+                background-image: url('../../assets/home/mobile/image-graphic-design.jpg');
+            }
 
             .home-view__background {
                 .home-view-projects__title {

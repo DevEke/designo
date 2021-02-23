@@ -5,16 +5,17 @@ import './nav-bar.scss';
 
 class NavBar extends Component {
     render() {
+        const { menuToggle, hideMenu } = this.props;
         return (
             <div className="app-nav-bar__container">
                 <div className="nav-bar__container">
-                    <Link to="/"><img className="nav-bar__logo" src={logodark} alt="logo" /></Link>
+                    <Link  onClick={hideMenu} to="/"><img className="nav-bar__logo" src={logodark} alt="logo" /></Link>
                     <div className="nav-bar__links">
                         <Link to="/about" className="nav-bar__link">Our Company</Link>
                         <Link to="/locations" className="nav-bar__link">Locations</Link>
                         <Link to="/contact" className="nav-bar__link">Contact</Link>
                     </div>
-                    <button className="nav-bar__mobile-menu"/>
+                    <button onClick={menuToggle} id="mobile-menu__button" className="nav-bar__mobile-menu"/>
                 </div>
             </div>
         )

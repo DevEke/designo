@@ -19,7 +19,7 @@ class HomeView extends Component {
                         creating fully responsive websites, app design, and engaging 
                         brand experiences. Find out more about our services.
                     </p>
-                    <Link className="link-style">
+                    <Link to="/about" className="link-style">
                         <button className="home-view__button">Learn More</button>
                     </Link>
                 </section>
@@ -42,7 +42,7 @@ class HomeView extends Component {
                             </p>
                         </div>
                     </Link>
-                    <Link className="link-style home-view-projects__graphic">
+                    <Link to="/graphic-design" className="link-style home-view-projects__graphic">
                         <div className="home-view__background">
                             <h2 className="home-view-projects__title">Graphic Design</h2>
                             <p className="home-view-projects__link">

@@ -166,10 +166,12 @@
             .about-view__hero-introduction {
                 border-radius: 0 0 15px 15px;
                 padding: 64px;
-                text-align: center; 
+                text-align: center;
+                background-position: -300% 125%;
             }
             .about-view__hero-image {
                 order: -1;
+                background-image: url('../../assets/about/tablet/image-about-hero.jpg');
                 border-radius: 15px 15px 0 0;
                 background-position: 50% 45%;
             }
@@ -184,13 +186,15 @@
             margin-top: 120px;
 
             .about-view__talent-image {
+                background-image: url('../../assets/about/tablet/image-world-class-talent.jpg');
                 border-radius: 15px 15px 0 0;
                 background-position: 50% 60%;
             }
             .about-view__talent-information {
                 border-radius: 0 0 15px 15px;
                 padding: 64px;
-                text-align: center; 
+                text-align: center;
+                background-position: 100% 70%;
             }
         }
 
@@ -213,10 +217,12 @@
             .about-view__deal-information {
                 border-radius: 0 0 15px 15px;
                 padding: 64px;
-                text-align: center; 
+                text-align: center;
+                background-position: 100% 70%;
             }
             .about-view__deal-image {
                 order: -1;
+                background-image: url('../../assets/about/tablet/image-real-deal.jpg');
                 border-radius: 15px 15px 0 0;
                 background-position: 50% 50%;
             }
@@ -229,74 +235,82 @@
 // ========================
 // MOBILE
 // ========================
+@media only screen and (max-width: 425px) {
 
-.about-view__container {
+    .about-view__container {
 
-    .about-view__hero-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: 320px auto;
-        margin: 0;
-        height: auto;
-        width: 100%;
-        
-        .about-view__hero-introduction {
-            border-radius: 0;
-            padding: 64px;
-            text-align: center; 
-            padding: 80px 24px;
-
-            .about-view__hero-title {
-                margin-bottom: 24px;
-            } 
+        .about-view__hero-container {
+            grid-template-columns: 1fr;
+            grid-template-rows: 320px auto;
+            margin: 0;
+            height: auto;
+            width: 100%;
+            
+            .about-view__hero-introduction {
+                border-radius: 0;
+                padding: 64px;
+                text-align: center; 
+                padding: 80px 24px;
+                background-image: url('../../assets/about/mobile/bg-pattern-hero-about-mobile.svg');
+                background-position: 105% 25%; 
+                
+    
+                .about-view__hero-title {
+                    margin-bottom: 24px;
+                } 
+            }
+            .about-view__hero-image {
+                order: -1;
+                border-radius: 0;
+                background-position: 50% 45%;
+            }
         }
-        .about-view__hero-image {
-            order: -1;
-            border-radius: 0;
-            background-position: 50% 45%;
+        .about-view__talent-container {
+            grid-template-columns: 1fr;
+            grid-template-rows: 320px auto;
+            margin: 0;
+            height: auto;
+            width: 100%;
+    
+            .about-view__talent-image {
+                border-radius: 0;
+                background-position: 50% 60%;
+            }
+            .about-view__talent-information {
+                border-radius: 0;
+                padding: 80px 24px;
+                text-align: center;
+                background-position: 0% 100%;
+            }
         }
-    }
-    .about-view__talent-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: 320px auto;
-        margin: 0;
-        height: auto;
-        width: 100%;
-
-        .about-view__talent-image {
-            border-radius: 0;
-            background-position: 50% 60%;
+        .about-view__location-grid {
+            grid-row-gap: 48px;
+            width: 100%;
+            height: auto;
+            margin: 120px 0;
         }
-        .about-view__talent-information {
-            border-radius: 0;
-            padding: 80px 24px;
-            text-align: center; 
+        .about-view__deal-container {
+            grid-template-columns: 1fr;
+            grid-template-rows: 320px auto;
+            margin: 0;
+            height: auto;
+            width: 100%;
+            margin-bottom: -69px;
+    
+            .about-view__deal-information {
+                border-radius: 0;
+                padding: 80px 24px;
+                text-align: center;
+                background-position: 0% 100%;
+            }
+            .about-view__deal-image {
+                order: -1;
+                border-radius: 0;
+                background-position: 50% 50%;
+            }
+    
         }
-    }
-    .about-view__location-grid {
-        grid-row-gap: 48px;
-        width: 100%;
-        height: auto;
-        margin: 120px 0;
-    }
-    .about-view__deal-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: 320px auto;
-        margin: 0;
-        height: auto;
-        width: 100%;
-        margin-bottom: -69px;
-
-        .about-view__deal-information {
-            border-radius: 0;
-            padding: 80px 24px;
-            text-align: center; 
-        }
-        .about-view__deal-image {
-            order: -1;
-            border-radius: 0;
-            background-position: 50% 50%;
-        }
-
+    
     }
 
 }
